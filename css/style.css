@@ -24,7 +24,7 @@ main {
   background-color: var(--dark-container-color);
   border-radius: 1rem;
   display: flex;
-  width: max-content;
+  width: 70rem;
 }
 .search-icon {
   font-size: 3.4rem;
@@ -37,19 +37,22 @@ main {
   color: #ffff;
   margin-left: 1.2rem;
   outline: none;
+  /* border: 2px solid red; */
+  height: 4rem;
+  width: 55rem;
 }
 .input-field::placeholder {
   color: #ffff;
 }
+
 .btn-submit {
   background-color: var(--color-special);
   border-radius: 0.6rem;
   color: #fff;
   cursor: pointer;
   height: 4.6rem;
-  margin-left: 6rem;
   margin: 0.8rem 0.8rem;
-  margin-left: 16rem;
+  /* margin-left: 35rem; */
   width: 10rem;
 }
 
@@ -57,7 +60,8 @@ main {
   margin-top: 3rem;
   border-radius: 1rem;
   background-color: var(--dark-container-color);
-  padding: 2rem;
+  width: 66rem;
+  padding: 2rem
 }
 .container-header {
   display: flex;
@@ -79,4 +83,23 @@ main {
 .person-photo {
   height: 8rem;
   border-radius: 100%;
+}
+
+.container-detail {
+  display: flex;
+  gap: 4rem;
+
+  margin-top: 4rem;
+  background-color: var(--dark-bg-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: max-content;
+  padding: 2rem 8rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.detail-count {
+  text-align: center;
+  margin-top: 0.8rem;
+  font-weight: 700;
 }
