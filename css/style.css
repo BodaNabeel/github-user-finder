@@ -6,3 +6,7 @@
   --color-special: #0079ff;
   --light-grey: #D3D3D3;
 }
+
+.main__heading {
+    font-family: 'Noto Sans Mono', monospace;
+}
