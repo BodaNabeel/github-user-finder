@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,18 +15,73 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>GitHub User Finder</title>
   </head>
   <body>
     <main>
-      <h1 class="main__heading">GitHub Finder..</h1>
-      <div class="search__field">
-        <i class="material-icons icon icon-search">search</i>
-        <input type="text" placeholder="enter username..">
+      <h1 class="main-heading">GitHub Finder..</h1>
+
+      <div class="search-field">
+        <span class="material-icons-outlined icon"> search </span>
+        <input type="text" placeholder="enter username.." />
         <button class="btn-submit">SUBMIT</button>
       </div>
+
+      <section class="container"></section>
+      <div class="container-header">
+        <img src="" alt="" class="container-header__left" />
+        <div class="container-header__right">
+          <h2 class="person-name">Nabeel Boda</h2>
+          <p class="person-dateOfJoin">Joined 25 Jan 2021</p>
+          <p class="person-userName">BodaNabeel</p>
+          <p class="person-bio">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+            quas nostrum inventore sit, ducimus animi?
+          </p>
+        </div>
+      </div>
+
+      <div class="container-detail">
+        <p class="detail">
+          Repos <br />
+          8
+        </p>
+        <p class="detail">
+          Followers <br />
+          245
+        </p>
+        <p class="detail">
+          Following <br />
+          9
+        </p>
+      </div>
+
+      <div class="container-info">
+        <div class="container-info__location">
+          <span class="material-icons-outlined icon"> room </span>
+          <p class="container-info__text">Location</p>
+        </div>
+        <div class="container-info__location">
+          <i class="fab fa-twitter icon icon-twitter"></i>
+          <p class="container-info__text">Twitter</p>
+        </div>
+        <div class="container-info__location">
+          <span class="material-icons-outlined icon"> link </span>
+          <p class="container-info__text">Blog Link</p>
+        </div>
+        <div class="container-info__location">
+          <span class="material-icons-outlined icon"> location_city </span>
+          <p class="container-info__text">Student/Me/Company</p>
+        </div>
+      </div>
     </main>
+
+    <script
+      src="https://kit.fontawesome.com/8f4ba2f307.js"
+      crossorigin="anonymous"
+    ></script>
     <script defer src="app.js"></script>
   </body>
 </html>

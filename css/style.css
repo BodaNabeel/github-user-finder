@@ -4,9 +4,11 @@
   --light-bg-color: #f5f8ff;
   --light-container-color: #ffff;
   --color-special: #0079ff;
-  --light-grey: #D3D3D3;
+  --light-grey: #d3d3d3;
 }
-
-.main__heading {
-    font-family: 'Noto Sans Mono', monospace;
+body {
+  font-size: 1.2rem;
+}
+.main-heading {
+  font-family: "Noto Sans Mono", monospace;
 }
