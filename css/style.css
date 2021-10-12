@@ -61,7 +61,7 @@ main {
   border-radius: 1rem;
   background-color: var(--dark-container-color);
   width: 66rem;
-  padding: 2rem
+  padding: 2rem;
 }
 .container-header {
   display: flex;
@@ -102,4 +102,23 @@ main {
   text-align: center;
   margin-top: 0.8rem;
   font-weight: 700;
+}
+
+.container-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  margin-top: 2rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.container-info__flex {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0.8rem 0;
+}
+.icon-twitter {
+  font-size: 2rem;
 }
