@@ -7,8 +7,48 @@
   --light-grey: #d3d3d3;
 }
 body {
+  background-color: var(--dark-bg-color);
+  color: white;
+  font-family: "Noto Sans Mono", monospace;
   font-size: 1.2rem;
 }
+main {
+  margin-left: 20rem;
+  margin-top: 10rem;
+}
 .main-heading {
-  font-family: "Noto Sans Mono", monospace;
+  margin-bottom: 1.4rem;
+}
+.search-field {
+  align-items: center;
+  background-color: var(--dark-container-color);
+  border-radius: 1rem;
+  display: flex;
+  width: max-content;
+}
+.search-icon {
+  font-size: 3.4rem;
+  color: var(--color-special);
+  margin-left: 2.8rem;
+}
+.input-field {
+  background-color: transparent;
+  border: none;
+  color: #ffff;
+  font-size: 1.8rem;
+  margin-left: 1.2rem;
+  outline: none;
+}
+.input-field::placeholder {
+  color: #ffff;
+}
+.btn-submit {
+  background-color: var(--color-special);
+  border-radius: 0.6rem;
+  color: #fff;
+  cursor: pointer;
+  height: 4.6rem;
+  margin-left: 6rem;
+  margin: 0.8rem 0.8rem;
+  width: 10rem;
 }
