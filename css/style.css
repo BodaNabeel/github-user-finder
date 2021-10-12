@@ -35,7 +35,6 @@ main {
   background-color: transparent;
   border: none;
   color: #ffff;
-  font-size: 1.8rem;
   margin-left: 1.2rem;
   outline: none;
 }
@@ -50,5 +49,34 @@ main {
   height: 4.6rem;
   margin-left: 6rem;
   margin: 0.8rem 0.8rem;
+  margin-left: 16rem;
   width: 10rem;
+}
+
+.container {
+  margin-top: 3rem;
+  border-radius: 1rem;
+  background-color: var(--dark-container-color);
+  padding: 2rem;
+}
+.container-header {
+  display: flex;
+  gap: 4rem;
+}
+.container-header__right {
+  display: grid;
+  grid-template-columns: 0.3fr 0.7fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.person-userName {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.person-bio {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.person-photo {
+  height: 8rem;
+  border-radius: 100%;
 }
