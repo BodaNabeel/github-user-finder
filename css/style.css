@@ -94,13 +94,14 @@ main {
 
 .container-detail {
   display: flex;
+  justify-content: center;
   gap: 4rem;
 
   margin-top: 4rem;
   background-color: var(--dark-bg-color);
   padding: 2rem;
   border-radius: 1rem;
-  width: max-content;
+  width: 30rem;
   padding: 2rem 8rem;
   margin-left: 50%;
   transform: translateX(-50%);
@@ -161,5 +162,8 @@ main {
     margin-top: 3.5rem;
     width: 40ch;
     line-height: 1.4;
+  }
+  .container-detail {
+    width: 17rem
   }
 }
