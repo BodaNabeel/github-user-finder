@@ -11,9 +11,12 @@ body {
   color: white;
   font-family: "Noto Sans Mono", monospace;
   font-size: 1.2rem;
+
+  display: flex;
+  justify-content: center;
 }
 main {
-  margin-left: 20rem;
+  /* margin-left: 20rem; */
   margin-top: 10rem;
 }
 .main-heading {
@@ -121,4 +124,8 @@ main {
 }
 .icon-twitter {
   font-size: 2rem;
+}
+
+@media screen and (max-width: 915px) {
+  
 }
