@@ -65,6 +65,7 @@ main {
   background-color: var(--dark-container-color);
   width: 66rem;
   padding: 2rem;
+  margin-bottom: 4rem;
 }
 .container-header {
   display: flex;
@@ -136,6 +137,9 @@ main {
     display: block;
     margin-left: 4rem;
   }
+  main {
+    margin-top: 2rem;
+  }
   .container {
     width: 32rem;
   }
@@ -166,4 +170,25 @@ main {
   .container-detail {
     width: 17rem
   }
+  .container-info {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr ;
+    margin-left: 35%;
+  }
 }
+@media screen and (max-width:440px) {
+  .search-field  {
+    width: 30rem
+  }
+  .container {
+    width: 26.5rem;
+  }
+  .container-detail {
+    width: 12rem;
+  }
+  .person-bio {
+    margin-left: -15rem;
+  }
+}
+
