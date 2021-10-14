@@ -1,37 +1,35 @@
 // Object to store data from API
-let person = {
-  userName: null,
-  name: null,
-  bio: null,
-  dateOfJoin: null,
-  repos: null,
-  followers: null,
-  following: null,
-  location: null,
-  blogLink: null,
-  twitterID: null,
-  status: null,
-};
+let person = {};
 
 // Variables of HTML elements
 const inputField = document.querySelector(".input-field");
 const submitBtn = document.querySelector(".btn-submit");
-
+const 
 // Functions
 
 // 1. Getting data from inputData
 const getInputData = function () {
   return inputField.value;
 };
+// 2. Updating UI 
+const updateUI = function(data) {
 
+}
+async function fetchResults(userName) {
+    const res = await fetch(`https://api.github.com/users/bodanabeel`)
+    const json = await res.json()
+    console.log(json)
+}
 // Event Listeners
 submitBtn.addEventListener("click", () => {
   person.userName = getInputData();
-  console.log(person.userName);
+  fetchResults(person.userName)
+
 });
 inputField.addEventListener("keypress", function (e) {
   if (e.keyCode === 13) {
     person.userName = getInputData();
-    console.log(person.userName);
+    // fetchApi(person.userName);
+    fetchResults(person.userName)
   }
 });
