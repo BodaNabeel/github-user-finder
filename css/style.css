@@ -66,6 +66,8 @@ main {
   width: 66rem;
   padding: 2rem;
   margin-bottom: 4rem;
+
+  display: none;
 }
 .container-header {
   display: flex;
