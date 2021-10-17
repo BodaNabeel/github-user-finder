@@ -134,6 +134,18 @@ main {
   font-size: 2rem;
 }
 
+.container-error{
+  display: flex;
+  gap: 1.5rem;
+}
+.error-msg {
+  align-self: center;
+  font-size: 2.8rem;
+  color: #616ea7
+}
+.error-img {
+  width: 60%
+}
 @media screen and (max-width: 520px) {
   body {
     display: block;
@@ -164,7 +176,7 @@ main {
   .person-bio {
     grid-column-start: 1;
     grid-column-end: 2;
-    margin-left: -12rem;
+    margin-left: -7rem;
     margin-top: 3.5rem;
     width: 40ch;
     line-height: 1.4;
@@ -190,7 +202,7 @@ main {
     width: 12rem;
   }
   .person-bio {
-    margin-left: -15rem;
+    margin-left: -12rem;
   }
 }
 

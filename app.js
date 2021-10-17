@@ -20,7 +20,12 @@ let user_status = document.querySelector(".status");
 let user_profilePicture = document.querySelector(".profile-picture");
 
 
-const markupError = `<img src="dp.jpg" height="200" width="400" alt="" class="error-img">`;
+const markupError = `
+<div class="container-error"> 
+<img class="error-img" src="https://fabmovielibrary.netlify.app/static/media/empty.c8301e2a.svg" alt="" class="error-img">
+<p class="error-msg"> ERROR! <br> User Not Found </p>
+</div>
+`;
 
 // Functions:
 
