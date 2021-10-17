@@ -4,8 +4,9 @@ let person = {};
 // Variables of HTML elements
 const inputField = document.querySelector(".input-field");
 const submitBtn = document.querySelector(".btn-submit");
-
 const containerMain = document.querySelector(".container");
+const errorPop = document.querySelector(".error-pop");
+
 let user_name = document.querySelector(".person-name");
 let user_dateOfJoin = document.querySelector(".person-dateOfJoin");
 let user_userName = document.querySelector(".person-userName");
@@ -107,11 +108,16 @@ const addEvent = function () {
   fetchResults(person.userName);
   containerMain.style.display = "block";
 };
-// Event Listeners
 
+
+// Event Listeners:
 submitBtn.addEventListener("click", function () {
   if (inputField.value === "") {
-    alert("Input ID YOU SCUM");
+    errorPop.style.display = "inline-block";
+
+    setTimeout(() => {
+      errorPop.style.display = "none";
+    }, 1200);
   } else {
     addEvent();
   }
@@ -119,7 +125,11 @@ submitBtn.addEventListener("click", function () {
 inputField.addEventListener("keypress", function (e) {
   if (e.keyCode === 13) {
     if (inputField.value === "") {
-      alert("Input ID YOU SCUM");
+      errorPop.style.display = "inline-block";
+
+      setTimeout(() => {
+        errorPop.style.display = "none";
+      }, 1200);
     } else {
       addEvent();
     }
