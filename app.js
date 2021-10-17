@@ -31,14 +31,14 @@ const getInputData = function () {
 // 2. Updating UI
 const updateUI = function (data) {
   const markUp = `
-<div class="container-header">
+        <div class="container-header">
           <img
             src="${data.avatar_url}"
             alt="Profile picture of user"
             class="container-header__left person-photo profile-picture"
           />
           </div>
-          <div>
+        <div>
             <div class="container-header__right">
               <h2 class="person-name">${data.name}</h2>
               <p class="person-dateOfJoin">Joined: ${dayjs(data.created_at).format('D-MMM-YYYY')}</p>
@@ -46,39 +46,39 @@ const updateUI = function (data) {
               <p class="person-bio">${data.bio}</p>
             </div>
             
-                    <div class="container-detail">
-            <div class="detail">
-              <p class="detail-title">Repos</p>
-              <p class="detail-count repos-no">${data.public_repos}</p>
+            <div class="container-detail">
+              <div class="detail">
+                <p class="detail-title">Repos</p>
+                <p class="detail-count repos-no">${data.public_repos}</p>
+              </div>
+              <div class="detail">
+                <p class="detail-title">Followers</p>
+                <p class="detail-count followers-no">${data.followers}</p>
+              </div>
+              <div class="detail">
+                <p class="detail-title">Following</p>
+                <p class="detail-count following-no">${data.following}</p>
+              </div>
             </div>
-            <div class="detail">
-              <p class="detail-title">Followers</p>
-              <p class="detail-count followers-no">${data.followers}</p>
-            </div>
-            <div class="detail">
-              <p class="detail-title">Following</p>
-              <p class="detail-count following-no">${data.following}</p>
-            </div>
-                    </div>
             
-                    <div class="container-info">
-            <div class="container-info__location container-info__flex">
-              <span class="material-icons-outlined icon"> room </span>
-              <p class="container-info__text location">${verifyValue(data.location)}</p>
+            <div class="container-info">
+              <div class="container-info__location container-info__flex">
+                <span class="material-icons-outlined icon"> room </span>
+                <p class="container-info__text location">${verifyValue(data.location)}</p>
+              </div>
+              <div class="container-info__location container-info__flex">
+                <i class="fab fa-twitter icon icon-twitter"></i>
+                <p class="container-info__text twitter-handle">${verifyValue(data.twitter_username)}</p>
+              </div>
+              <div class="container-info__location container-info__flex">
+                <span class="material-icons-outlined icon"> link </span>
+                <p class="container-info__text blog-link">${verifyValue(data.blog)}</p>
+              </div>
+              <div class="container-info__location container-info__flex">
+                <span class="material-icons-outlined icon"> location_city </span>
+                <p class="container-info__text status">${verifyValue(data.company)}</p>
+              </div>
             </div>
-            <div class="container-info__location container-info__flex">
-              <i class="fab fa-twitter icon icon-twitter"></i>
-              <p class="container-info__text twitter-handle">${verifyValue(data.twitter_username)}</p>
-            </div>
-            <div class="container-info__location container-info__flex">
-              <span class="material-icons-outlined icon"> link </span>
-              <p class="container-info__text blog-link">${verifyValue(data.blog)}</p>
-            </div>
-            <div class="container-info__location container-info__flex">
-              <span class="material-icons-outlined icon"> location_city </span>
-              <p class="container-info__text status">${verifyValue(data.company)}</p>
-            </div>
-                    </div>
           </div>
 `;
   containerMain.innerHTML = markUp;
