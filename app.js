@@ -16,7 +16,14 @@ const markupError = `
 `;
 
 // Functions:
-
+// a. checking if data given is null or not
+const verifyValue = function(value) {
+  if(value === null || value === "") {
+    return "Not available"
+  } else {
+    return value
+  }
+}
 // 1. Getting data from inputData
 const getInputData = function () {
   return inputField.value;
@@ -56,19 +63,19 @@ const updateUI = function (data) {
         <div class="container-info">
           <div class="container-info__location container-info__flex">
             <span class="material-icons-outlined icon"> room </span>
-            <p class="container-info__text location">${data.location}</p>
+            <p class="container-info__text location">${verifyValue(data.location)}</p>
           </div>
           <div class="container-info__location container-info__flex">
             <i class="fab fa-twitter icon icon-twitter"></i>
-            <p class="container-info__text twitter-handle">${data.twitter_username}</p>
+            <p class="container-info__text twitter-handle">${verifyValue(data.twitter_username)}</p>
           </div>
           <div class="container-info__location container-info__flex">
             <span class="material-icons-outlined icon"> link </span>
-            <p class="container-info__text blog-link">${data.blog}</p>
+            <p class="container-info__text blog-link">${verifyValue(data.blog)}</p>
           </div>
           <div class="container-info__location container-info__flex">
             <span class="material-icons-outlined icon"> location_city </span>
-            <p class="container-info__text status">${data.company}</p>
+            <p class="container-info__text status">${verifyValue(data.company)}</p>
           </div>
         </div>
 `;
@@ -78,7 +85,7 @@ const updateUI = function (data) {
 const UpdateUIErr = function () {
   containerMain.innerHTML = markupError;
 };
-// 3. Fetch API
+// 4. Fetch API
 async function fetchResults(userName) {
   const res = await fetch(`https://api.github.com/users/${userName}`);
   if (res.status >= 200 && res.status <= 299) {
@@ -89,7 +96,7 @@ async function fetchResults(userName) {
   }
 }
 
-// 4. Things for addClicks
+// 5. Things for addClicks
 const addEvent = function () {
   person.userName = getInputData();
   fetchResults(person.userName);
