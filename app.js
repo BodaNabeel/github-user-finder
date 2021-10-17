@@ -7,18 +7,6 @@ const submitBtn = document.querySelector(".btn-submit");
 const containerMain = document.querySelector(".container");
 const errorPop = document.querySelector(".error-pop");
 
-let user_name = document.querySelector(".person-name");
-let user_dateOfJoin = document.querySelector(".person-dateOfJoin");
-let user_userName = document.querySelector(".person-userName");
-let user_bio = document.querySelector(".person-bio");
-let user_reposNo = document.querySelector(".repos-no");
-let user_followerNo = document.querySelector(".followers-no");
-let user_followingNo = document.querySelector(".following-no");
-let user_location = document.querySelector(".location");
-let user_twitterHandle = document.querySelector(".twitter-handle");
-let user_blogLink = document.querySelector(".blog-link");
-let user_status = document.querySelector(".status");
-let user_profilePicture = document.querySelector(".profile-picture");
 
 const markupError = `
 <div class="container-error"> 
@@ -97,7 +85,6 @@ async function fetchResults(userName) {
     const json = await res.json();
     updateUI(json);
   } else {
-    console.log(res.status, res.statusText);
     UpdateUIErr();
   }
 }
