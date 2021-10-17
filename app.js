@@ -18,6 +18,10 @@ let user_twitterHandle = document.querySelector(".twitter-handle");
 let user_blogLink = document.querySelector(".blog-link");
 let user_status = document.querySelector(".status");
 let user_profilePicture = document.querySelector(".profile-picture");
+
+
+const markupError = `<img src="dp.jpg" height="200" width="400" alt="" class="error-img">`;
+
 // Functions:
 
 // 1. Getting data from inputData
@@ -26,28 +30,70 @@ const getInputData = function () {
 };
 // 2. Updating UI
 const updateUI = function (data) {
-  user_name.innerHTML = data.name;
-  user_dateOfJoin.innerHTML = `Joined: ${data.created_at}`;
-  user_userName = data.login;
-  user_bio.innerHTML = data.bio;
-  user_reposNo.innerHTML = data.public_repos;
-  user_followerNo.innerHTML = data.followers;
-  user_followingNo.innerHTML = data.following;
-  user_location.innerHTML = data.location;
-  user_blogLink.innerHTML = data.blog;
-  user_status.innerHTML = data.company;
-  user_twitterHandle.innerHTML = data.twitter_username;
-  user_profilePicture.src = data.avatar_url;
+  const markUp = `
+<div class="container-header">
+          <img
+            src="${data.avatar_url}"
+            alt="Profile picture of user"
+            class="container-header__left person-photo profile-picture"
+          />
+          <div class="container-header__right">
+            <h2 class="person-name">${data.name}</h2>
+            <p class="person-dateOfJoin">Joined: ${data.created_at}</p>
+            <p class="person-userName">${data.login}</p>
+            <p class="person-bio">${data.bio}</p>
+          </div>
+        </div>
+
+        <div class="container-detail">
+          <div class="detail">
+            <p class="detail-title">Repos</p>
+            <p class="detail-count repos-no">${data.public_repos}</p>
+          </div>
+          <div class="detail">
+            <p class="detail-title">Followers</p>
+            <p class="detail-count followers-no">${data.followers}</p>
+          </div>
+          <div class="detail">
+            <p class="detail-title">Following</p>
+            <p class="detail-count following-no">${data.following}</p>
+          </div>
+        </div>
+
+        <div class="container-info">
+          <div class="container-info__location container-info__flex">
+            <span class="material-icons-outlined icon"> room </span>
+            <p class="container-info__text location">${data.location}</p>
+          </div>
+          <div class="container-info__location container-info__flex">
+            <i class="fab fa-twitter icon icon-twitter"></i>
+            <p class="container-info__text twitter-handle">${data.twitter_username}</p>
+          </div>
+          <div class="container-info__location container-info__flex">
+            <span class="material-icons-outlined icon"> link </span>
+            <p class="container-info__text blog-link">${data.blog}</p>
+          </div>
+          <div class="container-info__location container-info__flex">
+            <span class="material-icons-outlined icon"> location_city </span>
+            <p class="container-info__text status">${data.company}</p>
+          </div>
+        </div>
+`;
+  containerMain.innerHTML = markUp
+};
+// 3. Showing Error in UI
+const UpdateUIErr = function () {
+  containerMain.innerHTML = markupError;
 };
 // 3. Fetch API
 async function fetchResults(userName) {
   const res = await fetch(`https://api.github.com/users/${userName}`);
-  if(res.status >= 200 && res.status <= 299) {
-    const json = await res.json()
-    updateUI(json)
+  if (res.status >= 200 && res.status <= 299) {
+    const json = await res.json();
+    updateUI(json);
   } else {
-    console.log(res.statusText)
-    alert("not working")
+    console.log(res.status, res.statusText);
+    UpdateUIErr();
   }
 }
 
