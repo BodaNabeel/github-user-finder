@@ -10,7 +10,7 @@ body {
   background-color: var(--dark-bg-color);
   color: white;
   font-family: 'Noto Sans Mono', monospace;
-  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-size: clamp(1rem, 3vw, 1.4rem);
 }
 
 main {
@@ -55,7 +55,7 @@ main {
   color: #ffff;
   outline: none;
   /* border: 2px solid red; */
-  font-size: clamp(1.2rem, 2vw, 1.2rem);
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
 }
 .btn-submit {
   width: 25%;
