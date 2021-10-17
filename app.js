@@ -10,8 +10,8 @@ const errorPop = document.querySelector(".error-pop");
 
 const markupError = `
 <div class="container-error"> 
-<img class="error-img" src="https://fabmovielibrary.netlify.app/static/media/empty.c8301e2a.svg" alt="" class="error-img">
 <p class="error-msg"> ERROR! <br> User Not Found </p>
+<img class="error-img" src="https://fabmovielibrary.netlify.app/static/media/empty.c8301e2a.svg" alt="" class="error-img">
 </div>
 `;
 
@@ -114,7 +114,7 @@ const _default = function() {
 // Event Listeners:
 submitBtn.addEventListener("click", function () {
   if (inputField.value === "") {
-    errorPop.style.display = "inline-block";
+    errorPop.style.display = "block";
 
     setTimeout(() => {
       errorPop.style.display = "none";
