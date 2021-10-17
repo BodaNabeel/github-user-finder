@@ -206,3 +206,8 @@ main {
   }
 }
 
+@media screen and (max-width: 360px) {
+  body {
+    margin-left: 2.5rem;
+  }
+}

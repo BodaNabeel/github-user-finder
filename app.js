@@ -19,7 +19,6 @@ let user_blogLink = document.querySelector(".blog-link");
 let user_status = document.querySelector(".status");
 let user_profilePicture = document.querySelector(".profile-picture");
 
-
 const markupError = `
 <div class="container-error"> 
 <img class="error-img" src="https://fabmovielibrary.netlify.app/static/media/empty.c8301e2a.svg" alt="" class="error-img">
@@ -84,7 +83,7 @@ const updateUI = function (data) {
           </div>
         </div>
 `;
-  containerMain.innerHTML = markUp
+  containerMain.innerHTML = markUp;
 };
 // 3. Showing Error in UI
 const UpdateUIErr = function () {
@@ -109,9 +108,20 @@ const addEvent = function () {
   containerMain.style.display = "block";
 };
 // Event Listeners
-submitBtn.addEventListener("click", () => addEvent());
+
+submitBtn.addEventListener("click", function () {
+  if (inputField.value === "") {
+    alert("Input ID YOU SCUM");
+  } else {
+    addEvent();
+  }
+});
 inputField.addEventListener("keypress", function (e) {
   if (e.keyCode === 13) {
-    addEvent();
+    if (inputField.value === "") {
+      alert("Input ID YOU SCUM");
+    } else {
+      addEvent();
+    }
   }
 });
