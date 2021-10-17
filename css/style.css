@@ -9,69 +9,77 @@
 body {
   background-color: var(--dark-bg-color);
   color: white;
-  font-family: "Noto Sans Mono", monospace;
-  font-size: 1.2rem;
+  font-family: 'Noto Sans Mono', monospace;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+}
 
-  display: flex;
-  justify-content: center;
-}
 main {
-  /* margin-left: 20rem; */
-  margin-top: 10rem;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-top: 5rem;
 }
+
 .main-heading {
   margin-bottom: 1.4rem;
 }
-.search-field {
-  align-items: center;
-  background-color: var(--dark-container-color);
-  border-radius: 1rem;
+
+.search-input {
   display: flex;
-  width: 70rem;
+  width: 70%;
 }
+
+.search-field {
+  background-color: var(--dark-container-color);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0.8rem;
+  border-radius: 1rem;
+}
+
 .search-icon {
-  font-size: 3.4rem;
+  position: absolute;
   color: var(--color-special);
-  margin-left: 2.8rem;
+  top: 1.8rem;
+  left: 1.4rem;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
 }
+
 .input-field {
+  padding: 1rem;
+  padding-left: clamp(3rem, 5vw, 6rem);
+  width: 100%;
+  line-height: 1.5; /* 1 */
   background-color: transparent;
   border: none;
   color: #ffff;
-  margin-left: 1.2rem;
   outline: none;
   /* border: 2px solid red; */
-  height: 4rem;
-  width: 55rem;
+  font-size: clamp(1.2rem, 2vw, 1.2rem);
 }
-.input-field::placeholder {
-  color: #ffff;
-}
-
 .btn-submit {
+  width: 25%;
   background-color: var(--color-special);
   border-radius: 0.6rem;
   color: #fff;
   cursor: pointer;
-  height: 4.6rem;
-  margin: 0.8rem 0.8rem;
-  /* margin-left: 35rem; */
-  width: 10rem;
 }
 
 .container {
   margin-top: 3rem;
   border-radius: 1rem;
   background-color: var(--dark-container-color);
-  width: 66rem;
   padding: 2rem;
   margin-bottom: 4rem;
-
+  display: flex;
+  gap: 2rem;
   display: none;
 }
 .container-header {
   display: flex;
   gap: 4rem;
+  justify-content: center;
 }
 .container-header__right {
   display: grid;
@@ -97,17 +105,14 @@ main {
 
 .container-detail {
   display: flex;
-  justify-content: center;
-  gap: 4rem;
-
-  margin-top: 4rem;
+  justify-content: space-between;
+  gap: 2rem;
   background-color: var(--dark-bg-color);
-  padding: 2rem;
   border-radius: 1rem;
-  width: 30rem;
-  padding: 2rem 8rem;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  word-break: break-all;
+  margin: 2rem auto;
+  padding: clamp(1rem, 3vw, 1.4rem);
+  font-size: clamp(0.9rem, 3vw, 1.4rem);
 }
 .detail-count {
   text-align: center;
@@ -119,106 +124,44 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-
   margin-top: 2rem;
-  margin-left: 50%;
-  transform: translateX(-50%);
 }
 .container-info__flex {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  margin: 0.8rem 0;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  word-break: break-all;
 }
 .icon-twitter {
   font-size: 2rem;
 }
 
-.container-error{
+.container-error {
   display: flex;
   gap: 1.5rem;
 }
 .error-msg {
   align-self: center;
   font-size: 2.8rem;
-  color: #616ea7
+  color: #616ea7;
 }
 .error-img {
-  width: 60%
+  width: 60%;
 }
 
-.error-pop{
+.error-pop {
   background-color: rgba(255, 255, 255, 0.637);
   color: black;
   display: none;
-  font-size: 1.8rem;
   font-weight: 700;
   margin-top: 2.2rem;
   padding: 0.4rem 0.8rem;
   border-radius: 0.4rem;
 }
-@media screen and (max-width: 520px) {
-  body {
-    display: block;
-    margin-left: 4rem;
-  }
-  main {
-    margin-top: 2rem;
-  }
-  .container {
-    width: 32rem;
-  }
-  .search-field {
-    width: 36rem;
-  }
-  .container {
-    padding: 2rem;
-  }
-  .search-icon {
-    margin-left: 0.8rem;
-  }
-  .btn-submit {
-    width: 18rem;
-  }
-  .person-userName {
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-  .person-bio {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    margin-left: -10rem;
-    margin-top: 3.5rem;
-    width: 40ch;
-    line-height: 1.4;
-  }
-  .container-detail {
-    width: 17rem
-  }
-  .container-info {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr ;
-    margin-left: 35%;
-  }
-}
-@media screen and (max-width:440px) {
-  .search-field  {
-    width: 30rem
-  }
-  .container {
-    width: 26.5rem;
-  }
-  .container-detail {
-    width: 12rem;
-  }
-  .person-bio {
-    margin-left: -12rem;
-  }
-}
 
-@media screen and (max-width: 360px) {
-  body {
-    margin-left: 2.5rem;
+@media screen and (max-width: 520px) {
+  .container {
+    flex-direction: column;
   }
 }
