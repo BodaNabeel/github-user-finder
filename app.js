@@ -103,6 +103,11 @@ const addEvent = function () {
   containerMain.style.display = "block";
 };
 
+// 6. input field back to default
+const _default = function() {
+  inputField.value = ""
+  inputField.blur()
+}
 
 // Event Listeners:
 submitBtn.addEventListener("click", function () {
@@ -114,6 +119,7 @@ submitBtn.addEventListener("click", function () {
     }, 1200);
   } else {
     addEvent();
+    _default()
   }
 });
 inputField.addEventListener("keypress", function (e) {
@@ -126,6 +132,7 @@ inputField.addEventListener("keypress", function (e) {
       }, 1200);
     } else {
       addEvent();
+      _default()
     }
   }
 });
