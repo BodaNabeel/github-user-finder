@@ -42,10 +42,15 @@ const updateUI = function (data) {
 // 3. Fetch API
 async function fetchResults(userName) {
   const res = await fetch(`https://api.github.com/users/${userName}`);
-  const json = await res.json();
-  console.log(json);
-  updateUI(json);
+  if(res.status >= 200 && res.status <= 299) {
+    const json = await res.json()
+    updateUI(json)
+  } else {
+    console.log(res.statusText)
+    alert("not working")
+  }
 }
+
 // 4. Things for addClicks
 const addEvent = function () {
   person.userName = getInputData();
@@ -56,6 +61,6 @@ const addEvent = function () {
 submitBtn.addEventListener("click", () => addEvent());
 inputField.addEventListener("keypress", function (e) {
   if (e.keyCode === 13) {
-      addEvent()
+    addEvent();
   }
 });
