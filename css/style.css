@@ -153,8 +153,8 @@ main {
 }
 
 .error-pop {
-  background-color: rgba(255, 255, 255, 0.637);
-  color: black;
+  background-color: rgba(241, 149, 141, 0.87);
+  color: rgba(179, 35, 22, 0.87);
   display: none;
   font-weight: 700;
   margin-top: 2.2rem;

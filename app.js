@@ -118,7 +118,7 @@ submitBtn.addEventListener("click", function () {
 
     setTimeout(() => {
       errorPop.style.display = "none";
-    }, 1200);
+    }, 5000);
   } else {
     addEvent();
     _default()
@@ -127,11 +127,11 @@ submitBtn.addEventListener("click", function () {
 inputField.addEventListener("keypress", function (e) {
   if (e.keyCode === 13) {
     if (inputField.value === "") {
-      errorPop.style.display = "inline-block";
+      errorPop.style.display = "flex";
 
       setTimeout(() => {
         errorPop.style.display = "none";
-      }, 1200);
+      }, 5000);
     } else {
       addEvent();
       _default()
