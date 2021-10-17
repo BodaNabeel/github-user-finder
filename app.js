@@ -39,8 +39,8 @@ const updateUI = function (data) {
           />
           <div class="container-header__right">
             <h2 class="person-name">${data.name}</h2>
-            <p class="person-dateOfJoin">Joined: ${data.created_at}</p>
-            <p class="person-userName">${data.login}</p>
+            <p class="person-dateOfJoin">Joined: ${dayjs(data.created_at).format('D-MMM-YYYY')}</p>
+            <p class="person-userName">@${data.login}</p>
             <p class="person-bio">${data.bio}</p>
           </div>
         </div>
