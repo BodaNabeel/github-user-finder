@@ -17,6 +17,7 @@
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link href="github_finder.ico" rel="icon" type="image/x-icon" />
     <title>GitHub User Finder</title>
   </head>
   <body>
@@ -24,19 +25,22 @@
       <h1 class="main-heading">GitHub Finder..</h1>
 
       <div class="search-field">
-        <span class="material-icons-outlined icon search-icon"> search </span>
-        <input
-          type="text"
-          width="400px"
-          required
-          placeholder="Search GitHub username...."
-          class="input-field"
-        />
+        <div class="search-wrap">
+          <span class="material-icons-outlined icon search-icon"> search </span>
+          <input
+            type="text"
+            width="400px"
+            required
+            placeholder="Search GitHub username...."
+            class="input-field"
+          />
+        </div>
         <button class="btn-submit">Search</button>
       </div>
 
-      <div class="error-pop">Please input the username ❗</div>
-      <a href=""></a>
+      <div class="error-pop">
+        <i class="fas fa-exclamation-triangle"></i> Please input the username!
+      </div>
       <section class="container"></section>
     </main>
     <script
