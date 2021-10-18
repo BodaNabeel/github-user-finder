@@ -135,15 +135,15 @@ main {
 .icon-twitter {
   font-size: 2rem;
 }
-.container-error{
-display: grid;
-grid-template-columns: repeat(2,minmax(0,0.5fr));
-max-width: 100%;
-width: 40rem;
+.container-error {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 0.5fr));
+  max-width: 100%;
+  width: 40rem;
 
-grid-column: 1/end;
+  grid-column: 1 / end;
 
-margin: 0 auto;
+  margin: 0 auto;
 }
 .error-msg {
   font-size: 2.8rem;
@@ -157,7 +157,6 @@ margin: 0 auto;
   .container {
     grid-gap: 0.8rem;
   }
-  
   .container-right__heading > * {
     padding: 0.4rem;
   }
@@ -181,5 +180,8 @@ margin: 0 auto;
   }
   .container-info {
     grid-column: 1 / end;
+  }
+  .error-img {
+    margin-left: -4rem;
   }
 }
